@@ -1,3 +1,5 @@
+//import {outputData} from 'helpers';
+
 if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
 }
@@ -24,7 +26,6 @@ navigator.geolocation.getCurrentPosition(success, error);
 
 function outputData(data){
     //Set correct city name
-    console.log(data);
     const cityName = document.getElementById('city-name');
     cityName.innerText = data.name;
     //Set correct Icon

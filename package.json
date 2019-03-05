@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "simple weather app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verthon/Weather-App.git"
+  },
+  "author": "Krzysztof Sordyl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Verthon/Weather-App/issues"
+  },
+  "homepage": "https://github.com/Verthon/Weather-App#readme",
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
+}
