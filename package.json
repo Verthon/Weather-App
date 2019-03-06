@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/Verthon/Weather-App#readme",
   "devDependencies": {
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "@babel/core": "^7.3.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.11.0"
   }
 }

@@ -4,7 +4,10 @@ if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
 }
 
-const btn = document.getElementById('location');
+navigator.geolocation.getCurrentPosition(success, error);
+
+const btn = document.getElementById('unit');
+
 function success(pos){
     function reqListener(){
         //by default it response as XMLresponse, so idea is to parse it to JSON
@@ -19,10 +22,13 @@ function success(pos){
     request.responseType = 'text';
     request.send();
 }
+
+
+
 function error(err){
     console.warn(`ERROR(${err.code}): ${err.message} `)
 }
-navigator.geolocation.getCurrentPosition(success, error);
+
 
 function outputData(data){
     //Set correct city name
@@ -60,3 +66,14 @@ function outputData(data){
     const humidity = document.getElementById('humidity');
     humidity.innerText = `${data.main.humidity} %`;
 }
+
+let btn = new toggleButton('unit');
+  btn.addEventListener('click', function(){
+    if(btn.innerText == '°F'){
+      btn.innerText = `°C`
+      temperature.innerText = `${data.main.temp_min*1.8 + 32}°F`;
+      return;
+    }
+  temperature.innerText = `${data.main.temp_min}°C`;
+  btn.innerText = `°F`;     
+});
