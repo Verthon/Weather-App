@@ -1,14 +1,32 @@
 //import {outputData} from 'helpers';
+//import * from 'elements';
 
 if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
 }
-
 navigator.geolocation.getCurrentPosition(success, error);
 
-const btn = document.getElementById('unit');
 
 function success(pos){
+
+  //Fetch one
+  // const arr = [];
+
+  // crd = {
+  //   latitude: 11,
+  //   longitude: 22,
+  // }
+
+  // const url = `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`;
+  // fetch(url)
+  //   .then(data => data.json())
+  //   .then(data => outputData(data))
+
+  // const outputData = (data) => {
+  //   console.log(data);
+  // }
+
+  //working one
     function reqListener(){
         //by default it response as XMLresponse, so idea is to parse it to JSON
         let response = JSON.parse(this.responseText);
@@ -65,15 +83,21 @@ function outputData(data){
     wind.innerText = `${data.wind.speed} m/s`;
     const humidity = document.getElementById('humidity');
     humidity.innerText = `${data.main.humidity} %`;
+
+    function toggleButton(name){
+      this.element = document.getElementById(name);
+      return this.element;
+    }
+    
+    let btn = new toggleButton('unit');
+      btn.addEventListener('click', function(){
+        if(btn.innerText == '°F'){
+          btn.innerText = `°C`
+          temperature.innerText = `${(data.main.temp_min*1.8 + 32).toFixed(0)}°F`;
+          return;
+        }
+      temperature.innerText = `${data.main.temp_min.toFixed(0)}°C`;
+      btn.innerText = `°F`;     
+    });
 }
 
-let btn = new toggleButton('unit');
-  btn.addEventListener('click', function(){
-    if(btn.innerText == '°F'){
-      btn.innerText = `°C`
-      temperature.innerText = `${data.main.temp_min*1.8 + 32}°F`;
-      return;
-    }
-  temperature.innerText = `${data.main.temp_min}°C`;
-  btn.innerText = `°F`;     
-});
