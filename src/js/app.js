@@ -10,37 +10,32 @@ navigator.geolocation.getCurrentPosition(success, error);
 function success(pos){
 
   //Fetch one
-  // const arr = [];
+  let crd = pos.coords;
+  const url = `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`;
 
-  // crd = {
-  //   latitude: 11,
-  //   longitude: 22,
-  // }
+  const fetchData = () => {
+    fetch(url)
+    .then(data => data.json())
+    .then(data => outputData(data))
+  }
+  fetchData();
 
-  // const url = `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`;
-  // fetch(url)
-  //   .then(data => data.json())
-  //   .then(data => outputData(data))
-
-  // const outputData = (data) => {
-  //   console.log(data);
-  // }
 
   //working one
-    function reqListener(){
-        //by default it response as XMLresponse, so idea is to parse it to JSON
-        let response = JSON.parse(this.responseText);
-        //now i can access everything from json format
-        outputData(response);
-    }
-    let crd = pos.coords;
-    let request = new XMLHttpRequest;
-    request.addEventListener('load', reqListener);
-    request.open('GET', `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`);
-    request.responseType = 'text';
-    request.send();
+//     function reqListener(){
+//         //by default it response as XMLresponse, so idea is to parse it to JSON
+//         let response = JSON.parse(this.responseText);
+//         //now i can access everything from json format
+//         outputData(response);
+//     }
+//     let crd = pos.coords;
+//     let request = new XMLHttpRequest;
+//     request.addEventListener('load', reqListener);
+//     request.open('GET', `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`);
+//     request.responseType = 'text';
+//     request.send();
+// }
 }
-
 
 
 function error(err){
@@ -50,6 +45,7 @@ function error(err){
 
 function outputData(data){
     //Set correct city name
+    console.log(data);
     const cityName = document.getElementById('city-name');
     cityName.innerText = data.name;
     //Set correct Icon
