@@ -1,6 +1,5 @@
-//import {outputData} from 'helpers';
-//import * from 'elements';
-
+import elements from './elements';
+import '../scss/style.scss';
 if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
 }
@@ -21,7 +20,7 @@ function success(pos){
   fetchData();
 
 
-  //working one
+  //XMLHttpRequest one
 //     function reqListener(){
 //         //by default it response as XMLresponse, so idea is to parse it to JSON
 //         let response = JSON.parse(this.responseText);
@@ -71,7 +70,7 @@ function outputData(data){
     iconDesc.innerText = data.weather[0].description;
     // Set correct temperature
     const temperature = document.getElementById('temperature');
-    temperature.innerText = `${data.main.temp_min} C`;
+    temperature.innerText = `${data.main.temp_min.toFixed(0)}°C`;
     //Set pressure, wind speed and humidity
     const cPressure = document.getElementById('pressure');
     pressure.innerText = `${data.main.pressure} hPa`;
