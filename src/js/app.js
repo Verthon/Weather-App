@@ -18,22 +18,6 @@ function success(pos){
     .then(data => outputData(data))
   }
   fetchData();
-
-
-  //XMLHttpRequest one
-//     function reqListener(){
-//         //by default it response as XMLresponse, so idea is to parse it to JSON
-//         let response = JSON.parse(this.responseText);
-//         //now i can access everything from json format
-//         outputData(response);
-//     }
-//     let crd = pos.coords;
-//     let request = new XMLHttpRequest;
-//     request.addEventListener('load', reqListener);
-//     request.open('GET', `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`);
-//     request.responseType = 'text';
-//     request.send();
-// }
 }
 
 
