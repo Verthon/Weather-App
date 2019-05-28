@@ -1,4 +1,4 @@
-import elements from './elements';
+import * as elements from './elements';
 import '../scss/style.scss';
 if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
@@ -29,39 +29,39 @@ function error(err){
 function outputData(data){
     //Set correct city name
     console.log(data);
-    const cityName = document.getElementById('city-name');
-    cityName.innerText = data.name;
+    const cityName = elements.cityName;
+    cityName.textContent = data.name;
     //Set correct Icon
     const weatherIcon = document.getElementById('weather-icon');
     switch(data.weather[0].main){
         case 'Clouds':
-        weatherIcon.innerText = 'D';
+        weatherIcon.textContent = 'D';
         break;
         case 'Rain':
-        weatherIcon.innerText = 'a';
+        weatherIcon.textContent = 'a';
         break;
         case 'Clear':
-        weatherIcon.innerText = 'A';
+        weatherIcon.textContent = 'A';
         break;
         case 'Snow':
-        weatherIcon.innerText = 'W';
+        weatherIcon.textContent = 'W';
         break;
         default:
-        weatherIcon.innerText = 'g';
+        weatherIcon.textContent = 'g';
     }
     //Set description for icon
     const iconDesc = document.getElementById('icon-desc');
-    iconDesc.innerText = data.weather[0].description;
+    iconDesc.textContent = data.weather[0].description;
     // Set correct temperature
     const temperature = document.getElementById('temperature');
-    temperature.innerText = `${data.main.temp_min.toFixed(0)}°C`;
+    temperature.textContent = `${data.main.temp_min.toFixed(0)}°C`;
     //Set pressure, wind speed and humidity
     const cPressure = document.getElementById('pressure');
-    pressure.innerText = `${data.main.pressure} hPa`;
+    pressure.textContent = `${data.main.pressure} hPa`;
     const wind = document.getElementById('wind');
-    wind.innerText = `${data.wind.speed} m/s`;
+    wind.textContent = `${data.wind.speed} m/s`;
     const humidity = document.getElementById('humidity');
-    humidity.innerText = `${data.main.humidity} %`;
+    humidity.textContent = `${data.main.humidity} %`;
 
     function toggleButton(name){
       this.element = document.getElementById(name);
@@ -70,13 +70,13 @@ function outputData(data){
     
     let btn = new toggleButton('unit');
       btn.addEventListener('click', function(){
-        if(btn.innerText == '°F'){
-          btn.innerText = `°C`
-          temperature.innerText = `${(data.main.temp_min*1.8 + 32).toFixed(0)}°F`;
+        if(btn.textContent == '°F'){
+          btn.textContent = `°C`
+          temperature.textContent = `${(data.main.temp_min*1.8 + 32).toFixed(0)}°F`;
           return;
         }
-      temperature.innerText = `${data.main.temp_min.toFixed(0)}°C`;
-      btn.innerText = `°F`;     
+      temperature.textContent = `${data.main.temp_min.toFixed(0)}°C`;
+      btn.textContent = `°F`;     
     });
 }
 

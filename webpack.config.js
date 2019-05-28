@@ -10,6 +10,10 @@ module.exports = {
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html"
+    }),
   ],
   entry: './src/js/app.js',
   devServer: {
@@ -33,7 +37,7 @@ module.exports = {
           "style-loader",
           MiniCssExtractPlugin.loader,
           "css-loader",
-          "sass-loader"
+          "sass-loader",
         ]
       },
       {
@@ -44,6 +48,15 @@ module.exports = {
             options: {
               limit: 5000
             }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: { minimize: true }
           }
         ]
       },
