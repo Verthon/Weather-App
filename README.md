@@ -2,7 +2,7 @@
 
 Simple JavaScript application for displaying weather based on user location
 
-[Live version hosten on gh-pages](https://verthon.github.io/Weather-App/)
+[Live version hosted on gh-pages](https://verthon.github.io/Weather-App/)
 
 ## Technologies used
 
