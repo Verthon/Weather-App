@@ -1,16 +1,29 @@
-import * as elements from './elements';
+import {temperature, cityName, weatherIcon, iconDesc, wind, humidity, cPressure} from './elements';
 import '../scss/style.scss';
+import {Fetch} from './Fetch';
 if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
 }
 navigator.geolocation.getCurrentPosition(success, error);
 
+console.log(Fetch.prototype.fetchData());
+
+class App {
+  constructor(){
+
+  }
+
+  saveWeather(){
+
+  }
+}
 
 function success(pos){
-
+  console.log(pos);
   //Fetch one
   let crd = pos.coords;
-  const url = `https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`;
+  const proxy = `https://cors-anywhere.herokuapp.com/`;
+  const url = `${proxy}https://fcc-weather-api.glitch.me/api/current?lat=${crd.latitude}&lon=${crd.longitude}`;
 
   const fetchData = () => {
     fetch(url)
@@ -22,17 +35,15 @@ function success(pos){
 
 
 function error(err){
-    console.warn(`ERROR(${err.code}): ${err.message} `)
+  console.warn(`ERROR(${err.code}): ${err.message} `)
 }
 
 
 function outputData(data){
     //Set correct city name
     console.log(data);
-    const cityName = elements.cityName;
     cityName.textContent = data.name;
     //Set correct Icon
-    const weatherIcon = document.getElementById('weather-icon');
     switch(data.weather[0].main){
         case 'Clouds':
         weatherIcon.textContent = 'D';
@@ -50,17 +61,12 @@ function outputData(data){
         weatherIcon.textContent = 'g';
     }
     //Set description for icon
-    const iconDesc = document.getElementById('icon-desc');
     iconDesc.textContent = data.weather[0].description;
     // Set correct temperature
-    const temperature = document.getElementById('temperature');
     temperature.textContent = `${data.main.temp_min.toFixed(0)}°C`;
     //Set pressure, wind speed and humidity
-    const cPressure = document.getElementById('pressure');
     pressure.textContent = `${data.main.pressure} hPa`;
-    const wind = document.getElementById('wind');
     wind.textContent = `${data.wind.speed} m/s`;
-    const humidity = document.getElementById('humidity');
     humidity.textContent = `${data.main.humidity} %`;
 
     function toggleButton(name){
