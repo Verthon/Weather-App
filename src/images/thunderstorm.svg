@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-thunderstorm">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="thunderstorm" clip-path="url(#clip-thunderstorm)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_71" data-name="Path 71" d="M126.293,111.425a5.484,5.484,0,0,0-10.628.257,5.353,5.353,0,0,0-1.665-.265A5.8,5.8,0,0,0,114,123h12a5.807,5.807,0,0,0,.293-11.575ZM126,122H114a4.8,4.8,0,0,1,0-9.583,4.463,4.463,0,0,1,1.849.407.5.5,0,0,0,.7-.4,4.485,4.485,0,0,1,8.858-.4.5.5,0,0,0,.49.4.246.246,0,0,0,.1-.01A4.8,4.8,0,0,1,126,122Z" transform="translate(-104 -104)" fill="#231f20"/>
+    <path id="Path_72" data-name="Path 72" d="M115.486,132.13a.5.5,0,0,0,.707-.011l3.166-3.271A.5.5,0,0,0,119,128h-1.2l2-1.862a.5.5,0,1,0-.681-.732l-2.936,2.728a.5.5,0,0,0,.34.866h1.3l-2.346,2.423A.5.5,0,0,0,115.486,132.13Z" transform="translate(-104 -104)" fill="#231f20"/>
+    <path id="Path_73" data-name="Path 73" d="M122.606,128.267l2.5-2.5a.5.5,0,0,0-.707-.707l-2.5,2.5a.5.5,0,0,0,.354.854A.5.5,0,0,0,122.606,128.267Z" transform="translate(-104 -104)" fill="#231f20"/>
+    <path id="Path_74" data-name="Path 74" d="M112.606,128.267l2.5-2.5a.5.5,0,0,0-.707-.707l-2.5,2.5a.5.5,0,0,0,.354.854A.5.5,0,0,0,112.606,128.267Z" transform="translate(-104 -104)" fill="#231f20"/>
+  </g>
+</svg>

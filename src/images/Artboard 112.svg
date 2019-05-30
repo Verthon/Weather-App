@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-Artboard_112">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_112" data-name="Artboard 112" clip-path="url(#clip-Artboard_112)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_59" data-name="Path 59" d="M272,125a.5.5,0,0,0-1,0v4a.5.5,0,0,0,1,0Z" transform="translate(-260 -104)" fill="#231f20"/>
+    <path id="Path_60" data-name="Path 60" d="M278,125a.5.5,0,0,0-1,0v4a.5.5,0,0,0,1,0Z" transform="translate(-260 -104)" fill="#231f20"/>
+    <path id="Path_61" data-name="Path 61" d="M275,125a.5.5,0,0,0-1,0v2a.5.5,0,0,0,1,0Z" transform="translate(-260 -104)" fill="#231f20"/>
+    <path id="Path_62" data-name="Path 62" d="M281,125a.5.5,0,0,0-1,0v2a.5.5,0,0,0,1,0Z" transform="translate(-260 -104)" fill="#231f20"/>
+    <path id="Path_63" data-name="Path 63" d="M287.333,117.2a5.761,5.761,0,0,0-5.206-5.794,5.484,5.484,0,0,0-10.629.257,5.353,5.353,0,0,0-1.665-.265,5.811,5.811,0,0,0,0,11.605h12A5.733,5.733,0,0,0,287.333,117.2Zm-22,0a4.78,4.78,0,0,1,4.5-4.8,4.471,4.471,0,0,1,1.85.407.5.5,0,0,0,.453-.021.5.5,0,0,0,.25-.379,4.485,4.485,0,0,1,8.857-.4.506.506,0,0,0,.5.4.517.517,0,0,0,.085-.01,4.813,4.813,0,0,1,0,9.605h-12A4.78,4.78,0,0,1,265.333,117.2Z" transform="translate(-260 -104)" fill="#231f20"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="0.5" cy="0.5" r="0.5" transform="translate(13.93 25.105)" fill="#231f20"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="0.5" cy="0.5" r="0.5" transform="translate(19.93 25.105)" fill="#231f20"/>
+    <circle id="Ellipse_4" data-name="Ellipse 4" cx="0.5" cy="0.5" r="0.5" transform="translate(16.93 27.105)" fill="#231f20"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="0.5" cy="0.5" r="0.5" transform="translate(10.93 27.105)" fill="#231f20"/>
+  </g>
+</svg>

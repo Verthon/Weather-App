@@ -1,12 +1,16 @@
-import {key} from './api';
 
 export class Fetch {
+
   constructor(long, lat){
-    this.key = "5ac9373c080767bb4adff9e5be3ee236";
     this.long = long;
     this.lat = lat;
+    this.data = false;
   }
-  fetchData() {
-    console.log(this.key);
+
+  static fetchData(key, city="London") {
+    return(
+      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${key}`)
+    );
+    
   }
 }

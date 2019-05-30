@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-humidity">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="humidity" clip-path="url(#clip-humidity)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_10" data-name="Path 10" d="M15.583,214.926c-.463.7-4.523,6.9-4.523,9.432a4.94,4.94,0,1,0,9.88,0c0-2.529-4.06-8.733-4.523-9.432A.519.519,0,0,0,15.583,214.926ZM16,228.3a3.945,3.945,0,0,1-3.94-3.94c0-1.7,2.547-6.049,3.94-8.236,1.393,2.187,3.94,6.539,3.94,8.236A3.945,3.945,0,0,1,16,228.3Z" transform="translate(0 -206)" fill="#231f20"/>
+  </g>
+</svg>

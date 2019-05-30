@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-rain">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="rain" clip-path="url(#clip-rain)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_86" data-name="Path 86" d="M426,73h12c3.147,0,5.5-3.234,5.5-6.125,0-2.8-2.207-5.922-5.206-6.116a5.484,5.484,0,0,0-10.629.256A5.383,5.383,0,0,0,426,60.75c-3.148,0-5.5,3.234-5.5,6.125S422.852,73,426,73Zm0-11.25a4.456,4.456,0,0,1,1.85.408.5.5,0,0,0,.454-.021.506.506,0,0,0,.249-.38,4.484,4.484,0,0,1,8.857-.4.518.518,0,0,0,.505.4.361.361,0,0,0,.085-.01c2.534,0,4.5,2.755,4.5,5.125S440.534,72,438,72H426c-2.534,0-4.5-2.755-4.5-5.125S423.466,61.75,426,61.75Z" transform="translate(-416 -52)" fill="#231f20"/>
+    <path id="Path_87" data-name="Path 87" d="M427,75v4a.5.5,0,0,0,1,0V75a.5.5,0,0,0-1,0Z" transform="translate(-416 -52)" fill="#231f20"/>
+    <path id="Path_88" data-name="Path 88" d="M433,75v4a.5.5,0,0,0,1,0V75a.5.5,0,0,0-1,0Z" transform="translate(-416 -52)" fill="#231f20"/>
+    <path id="Path_89" data-name="Path 89" d="M430,75v2a.5.5,0,0,0,1,0V75a.5.5,0,0,0-1,0Z" transform="translate(-416 -52)" fill="#231f20"/>
+    <path id="Path_90" data-name="Path 90" d="M436,75v2a.5.5,0,0,0,1,0V75a.5.5,0,0,0-1,0Z" transform="translate(-416 -52)" fill="#231f20"/>
+  </g>
+</svg>

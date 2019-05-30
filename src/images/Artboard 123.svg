@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-Artboard_123">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_123" data-name="Artboard 123" clip-path="url(#clip-Artboard_123)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_15" data-name="Path 15" d="M379.833,164a8,8,0,1,0,8,8A8.009,8.009,0,0,0,379.833,164Zm0,15a7,7,0,1,1,7-7A7.008,7.008,0,0,1,379.833,179Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_16" data-name="Path 16" d="M379,157v4a.5.5,0,0,0,1,0v-4a.5.5,0,0,0-1,0Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_17" data-name="Path 17" d="M379.5,182.5a.5.5,0,0,0-.5.5v4a.5.5,0,0,0,1,0v-4A.5.5,0,0,0,379.5,182.5Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_18" data-name="Path 18" d="M369.5,172.5a.5.5,0,0,0-.5-.5h-4a.5.5,0,0,0,0,1h4A.5.5,0,0,0,369.5,172.5Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_19" data-name="Path 19" d="M395,172h-4a.5.5,0,0,0,0,1h4a.5.5,0,0,0,0-1Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_20" data-name="Path 20" d="M371.868,179.425l-2.828,2.828a.5.5,0,0,0,.707.707l2.828-2.828a.5.5,0,0,0-.707-.707Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_21" data-name="Path 21" d="M390.253,161.04l-2.828,2.828a.5.5,0,1,0,.707.707l2.828-2.828a.5.5,0,0,0-.707-.707Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_22" data-name="Path 22" d="M388.132,179.425a.5.5,0,1,0-.707.707l2.828,2.828a.5.5,0,0,0,.707-.707Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <path id="Path_23" data-name="Path 23" d="M369.04,161.04a.5.5,0,0,0,0,.707l2.828,2.828a.5.5,0,0,0,.707-.707l-2.828-2.828A.5.5,0,0,0,369.04,161.04Z" transform="translate(-364 -156)" fill="#231f20"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="4.267" cy="4.267" r="4.267" transform="translate(11.566 11.733)" fill="#231f20"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-umbrella">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="umbrella" clip-path="url(#clip-umbrella)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_91" data-name="Path 91" d="M371.261,69.983a.5.5,0,0,0,.5-.5,7.229,7.229,0,0,1,14.458,0,.5.5,0,0,0,1,0,8.229,8.229,0,0,0-16.458,0A.5.5,0,0,0,371.261,69.983Z" transform="translate(-364 -52)" fill="#231f20"/>
+    <path id="Path_92" data-name="Path 92" d="M378.5,70.5a.5.5,0,0,0-.5.5v5.8a3.241,3.241,0,0,0,3.247,3.227,3.76,3.76,0,0,0,3.627-3.4.5.5,0,0,0-1,0,2.772,2.772,0,0,1-2.627,2.4A2.24,2.24,0,0,1,379,76.8V71A.5.5,0,0,0,378.5,70.5Z" transform="translate(-364 -52)" fill="#231f20"/>
+    <path id="Path_93" data-name="Path 93" d="M372.6,59.32l2.5-2.5a.5.5,0,1,0-.707-.707l-2.5,2.5a.5.5,0,1,0,.707.707Z" transform="translate(-364 -52)" fill="#231f20"/>
+    <path id="Path_94" data-name="Path 94" d="M376.6,59.32l2.5-2.5a.5.5,0,1,0-.707-.707l-2.5,2.5a.5.5,0,1,0,.707.707Z" transform="translate(-364 -52)" fill="#231f20"/>
+    <path id="Path_95" data-name="Path 95" d="M380.6,59.32l2.5-2.5a.5.5,0,1,0-.707-.707l-2.5,2.5a.5.5,0,1,0,.707.707Z" transform="translate(-364 -52)" fill="#231f20"/>
+    <path id="Path_96" data-name="Path 96" d="M384.6,59.32l2.5-2.5a.5.5,0,1,0-.707-.707l-2.5,2.5a.5.5,0,1,0,.707.707Z" transform="translate(-364 -52)" fill="#231f20"/>
+  </g>
+</svg>

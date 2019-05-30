@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-Artboard_95">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_95" data-name="Artboard 95" clip-path="url(#clip-Artboard_95)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_122" data-name="Path 122" d="M317,17.75a.5.5,0,0,0,.5-.5A4.692,4.692,0,0,1,322,12.5a4.456,4.456,0,0,1,1.85.408.5.5,0,0,0,.7-.4,4.484,4.484,0,0,1,8.857-.4.512.512,0,0,0,.505.4A.362.362,0,0,0,334,12.5a4.692,4.692,0,0,1,4.5,4.75.5.5,0,0,0,1,0,5.729,5.729,0,0,0-5.206-5.742,5.484,5.484,0,0,0-10.629.257A5.383,5.383,0,0,0,322,11.5a5.7,5.7,0,0,0-5.5,5.75A.5.5,0,0,0,317,17.75Z" transform="translate(-312)" fill="#231f20"/>
+    <path id="Path_123" data-name="Path 123" d="M317,20h22a.5.5,0,0,0,0-1H317a.5.5,0,0,0,0,1Z" transform="translate(-312)" fill="#231f20"/>
+    <path id="Path_124" data-name="Path 124" d="M317,22h22a.5.5,0,0,0,0-1H317a.5.5,0,0,0,0,1Z" transform="translate(-312)" fill="#231f20"/>
+    <path id="Path_125" data-name="Path 125" d="M317,24h22a.5.5,0,0,0,0-1H317a.5.5,0,0,0,0,1Z" transform="translate(-312)" fill="#231f20"/>
+  </g>
+</svg>

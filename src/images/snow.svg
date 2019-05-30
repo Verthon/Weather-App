@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <clipPath id="clip-snow">
+      <rect width="32" height="32"/>
+    </clipPath>
+  </defs>
+  <g id="snow" clip-path="url(#clip-snow)">
+    <rect width="32" height="32" fill="#fff"/>
+    <path id="Path_64" data-name="Path 64" d="M217.833,125h12c2.93,0,5.5-2.8,5.5-6a5.966,5.966,0,0,0-5.206-5.991,5.484,5.484,0,0,0-10.629.256,5.378,5.378,0,0,0-1.665-.265c-2.929,0-5.5,2.8-5.5,6S214.9,125,217.833,125Zm0-11a4.448,4.448,0,0,1,1.849.408.5.5,0,0,0,.7-.4,4.484,4.484,0,0,1,8.857-.4.514.514,0,0,0,.505.4.361.361,0,0,0,.085-.01c2.575,0,4.5,2.64,4.5,5s-1.925,5-4.5,5h-12c-2.575,0-4.5-2.64-4.5-5S215.258,114,217.833,114Z" transform="translate(-208 -104)" fill="#231f20"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="0.5" cy="0.5" r="0.5" transform="translate(12.333 24.5)" fill="#231f20"/>
+    <circle id="Ellipse_7" data-name="Ellipse 7" cx="0.5" cy="0.5" r="0.5" transform="translate(17.333 24.5)" fill="#231f20"/>
+    <circle id="Ellipse_8" data-name="Ellipse 8" cx="0.5" cy="0.5" r="0.5" transform="translate(15.333 22.5)" fill="#231f20"/>
+    <circle id="Ellipse_9" data-name="Ellipse 9" cx="0.5" cy="0.5" r="0.5" transform="translate(20.333 22.5)" fill="#231f20"/>
+    <circle id="Ellipse_10" data-name="Ellipse 10" cx="0.5" cy="0.5" r="0.5" transform="translate(14.333 26.5)" fill="#231f20"/>
+    <circle id="Ellipse_11" data-name="Ellipse 11" cx="0.5" cy="0.5" r="0.5" transform="translate(10.333 22.5)" fill="#231f20"/>
+  </g>
+</svg>
