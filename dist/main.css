@@ -20,7 +20,8 @@ body {
   box-shadow: 5px 5px 35px #aaaaaa;
   align-items: center;
   border-radius: 3px;
-  padding: 1rem; }
+  padding: 1rem;
+  min-height: 550px; }
 
 .city-name {
   text-transform: uppercase;
@@ -74,12 +75,12 @@ body {
 
 .data-description {
   font-family: 'Lato';
-  font-size: 11px;
+  font-size: 14px;
   margin: 0;
   text-transform: uppercase; }
 
 .data-value {
-  font-size: 13px;
+  font-size: 14px;
   margin: 5px;
   font-family: 'Lato';
   color: #fcfcfc91; }
