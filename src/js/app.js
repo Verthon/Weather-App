@@ -42,21 +42,34 @@ const outputData = (data) => {
     console.log(data);
     cityName.textContent = data.name;
     //Set correct Icon
-    switch(data.weather[0].main){
-        case 'Clouds':
-        weatherIcon.textContent = 'D';
+    switch(data.weather[0].description){
+        case 'broken clouds':
+          weatherIcon.textContent = 'D';
         break;
-        case 'Rain':
-        weatherIcon.textContent = 'a';
+        case 'overcast clouds':
+          weatherIcon.textContent = 'O';
         break;
-        case 'Clear':
-        weatherIcon.textContent = 'A';
+        case 'light rain':
+          weatherIcon.textContent = 'F';
+        break;  
+        case 'scattered clouds' || 'few clouds':
+          weatherIcon.textContent = 'C';
+        break;
+        case 'clear sky':
+          weatherIcon.textContent = 'A';
+        break;
+        case 'drizzle':
+          weatherIcon.textContent = 'X';
         break;
         case 'Snow':
-        weatherIcon.textContent = 'W';
+          weatherIcon.textContent = 'W';
+        break;
+        case 'haze':
+          weatherIcon.textContent = 'N';
         break;
         default:
-        weatherIcon.textContent = 'g';
+          weatherIcon.textContent = 'g';
+        break;  
     }
     //Set description for icon
     iconDesc.textContent = data.weather[0].description;

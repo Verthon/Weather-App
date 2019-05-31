@@ -1,3 +1,4 @@
+@import './animations.scss';
 
 @font-face {
   font-family: 'Weather';
@@ -26,6 +27,7 @@ body{
   border-radius: 3px;
   padding: 1rem;
   min-height: 550px;
+  animation: 2s fadeIn;
 }
 .city-name{
   text-transform: uppercase;
@@ -89,4 +91,6 @@ body{
   font-family: 'Lato';
   color: #fcfcfc91;
 }
+
+
 

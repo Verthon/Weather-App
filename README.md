@@ -1,6 +1,6 @@
 # Weather App
 
-Simple JavaScript application for displaying weather based on user location
+Simple JavaScript application for displaying weather
 
 [Live version hosted on gh-pages](https://verthon.github.io/Weather-App/dist)
 
