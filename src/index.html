@@ -9,12 +9,16 @@
 </head>
 <body>
   <div class="wrapper">
+    <form class="search-wrapper">
+      <label class="label" for="search">Search by city</label>
+      <input class="input" type="search" name="search" id="search" placeholder="Enter city name">
+    </form>
     <h1 class="city-name" id="city-name">Welcome</h1>
     <main class="app-content">       
         <p class="icon-output" id="weather-icon">Q</p>
         <p class="icon-description" id="icon-desc"></p>
         <p class="temperature" id="temperature">12</p>
-        <button class="temperature-unit" id="unit">°F</button>
+        <button class="temperature-unit" id="unit" role="button">°F</button>
     </main>
     <footer class="app-footer">
         <div class="data-box">n

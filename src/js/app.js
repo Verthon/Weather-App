@@ -1,6 +1,7 @@
 import {temperature, cityName, weatherIcon, iconDesc, wind, humidity, cPressure} from './elements';
 import '../scss/style.scss';
 import {Fetch} from './Fetch';
+import {Data} from './Data';
 import {key} from './api';
 // if(!navigator.geolocation){
 //     alert('Geolocation is not supported by your browser');
@@ -40,6 +41,7 @@ App.prototype.init();
 
 const outputData = (data) => {
     console.log(data);
+    console.log(window.location)
     cityName.textContent = data.name;
     //Set correct Icon
     switch(data.weather[0].description){
@@ -52,7 +54,8 @@ const outputData = (data) => {
         case 'light rain':
           weatherIcon.textContent = 'F';
         break;  
-        case 'scattered clouds' || 'few clouds':
+        case 'scattered clouds':
+        case 'few clouds':
           weatherIcon.textContent = 'C';
         break;
         case 'clear sky':

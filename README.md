@@ -11,5 +11,6 @@ Simple JavaScript application for displaying weather
 - HTML5
 - Webpack
 - [Powered by Dark Sky](https://darksky.net/poweredby/ )
+- ESLint
 
 https://cors-anywhere.herokuapp.com/
