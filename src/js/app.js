@@ -1,19 +1,20 @@
-import {temperature, cityName, weatherIcon, iconDesc, wind, humidity, cPressure} from './elements';
+import {temperature, cityName, weatherIcon, iconDesc, wind, humidity, pressure} from './elements';
 import '../scss/style.scss';
 import {Fetch} from './Fetch';
-import {Data} from './Data';
+import {renderData} from './renderData';
 import {key} from './api';
-// if(!navigator.geolocation){
-//     alert('Geolocation is not supported by your browser');
-// }
-// navigator.geolocation.getCurrentPosition(success, error);
+import {changeToFarenheit} from './helpers';
+
 class App {
   constructor(){
-    this.init();
+
   }
 
   init(){
-    window.addEventListener('DOMContentLoaded', this.success);
+   if(!navigator.geolocation){
+    alert('Geolocation is not supported by your browser');
+  }
+  navigator.geolocation.getCurrentPosition(this.success, this.error);
   }
 
   saveWeather(){
@@ -26,12 +27,12 @@ class App {
     Fetch.fetchData(key)
       .then(data => data.json())
       .then(json => outputData(json))
-      .catch(err => error(err));
+      .catch(err => this.error(err));
   }
 
   error(err){
     console.warn(`ERROR(${err.code}): ${err.message} `);
-    success();
+    this.success();
   }
 
 }
@@ -40,8 +41,7 @@ App.prototype.init();
 
 
 const outputData = (data) => {
-    console.log(data);
-    console.log(window.location)
+
     cityName.textContent = data.name;
     //Set correct Icon
     switch(data.weather[0].description){
@@ -91,8 +91,8 @@ const outputData = (data) => {
     let btn = new toggleButton('unit');
       btn.addEventListener('click', () => {
         if(btn.textContent == '°F'){
-          btn.textContent = `°C`
-          temperature.textContent = `${(data.main.temp_min*1.8 + 32).toFixed(0)}°F`;
+          btn.textContent = `°C`;
+          temperature.textContent = changeToFarenheit(data.main.temp_min);
           return;
         }
       temperature.textContent = `${data.main.temp_min.toFixed(0)}°C`;

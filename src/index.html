@@ -9,9 +9,13 @@
 </head>
 <body>
   <div class="wrapper">
-    <form class="search-wrapper">
-      <label class="label" for="search">Search by city</label>
-      <input class="input" type="search" name="search" id="search" placeholder="Enter city name">
+    <form class="search">
+      <label class="label" aria-label="search">Search by city</label>
+      <div class="search__wrapper">
+        <input class="search__input" type="search" name="search" id="search" placeholder="Enter city name">
+        <button class="search__submit" type="submit"><i class="fas fa-search"></i></button>
+      </div>
+      <p><i class="fa fa-location-arrow"></i>Current location</p>
     </form>
     <h1 class="city-name" id="city-name">Welcome</h1>
     <main class="app-content">       
