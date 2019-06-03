@@ -3,7 +3,7 @@ import '../scss/style.scss';
 import {Fetch} from './Fetch';
 import {renderData} from './renderData';
 import {key} from './api';
-import {changeToFarenheit} from './helpers';
+import {changeToFarenheit, formatTemperature, toggleButton} from './helpers';
 
 class App {
   constructor(){
@@ -11,28 +11,34 @@ class App {
   }
 
   init(){
+   document.addEventListener('DOMContentLoaded', this.getData); 
    if(!navigator.geolocation){
     alert('Geolocation is not supported by your browser');
   }
-  navigator.geolocation.getCurrentPosition(this.success, this.error);
+    navigator.geolocation.getCurrentPosition(this.success, this.error);
   }
 
   saveWeather(){
 
   }
 
-  success(pos){
-    let crd = pos.coords;
-    const proxy = `https://cors-anywhere.herokuapp.com/`;
-    Fetch.fetchData(key)
-      .then(data => data.json())
-      .then(json => outputData(json))
-      .catch(err => this.error(err));
-  }
-
   error(err){
     console.warn(`ERROR(${err.code}): ${err.message} `);
     this.success();
+  }
+
+  success(crd){
+    Fetch.fetchDataByCoords(key, crd)
+    .then(data => data.json())
+    .then(json => outputData(json))
+    .catch(err => this.error(err));
+  }
+
+  getData(){
+    Fetch.fetchDataByCity(key)
+      .then(data => data.json())
+      .then(json => outputData(json))
+      .catch(err => this.error(err));
   }
 
 }
@@ -82,11 +88,6 @@ const outputData = (data) => {
     pressure.textContent = `${data.main.pressure} hPa`;
     wind.textContent = `${data.wind.speed} m/s`;
     humidity.textContent = `${data.main.humidity} %`;
-
-    function toggleButton (name) {
-      this.element = document.getElementById(name);
-      return this.element;
-    }
     
     let btn = new toggleButton('unit');
       btn.addEventListener('click', () => {
@@ -95,7 +96,7 @@ const outputData = (data) => {
           temperature.textContent = changeToFarenheit(data.main.temp_min);
           return;
         }
-      temperature.textContent = `${data.main.temp_min.toFixed(0)}°C`;
+      temperature.textContent = formatTemperature(data.main.temp_min);
       btn.textContent = `°F`;     
     });
 }
