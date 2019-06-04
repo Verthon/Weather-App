@@ -1,17 +1,23 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @font-face {
   font-family: 'Weather';
   src: url(20a5ec56843af46bc35b2d74f2472b04.woff) format("woff"), url(d830ea19cc79b82e712f1a7b73ad568a.woff2) format("woff2"), url(978e0f6685b78664764ad8f15a3c600d.ttf) format("ttf"); }
 
 body {
-  font-size: 14px;
+  font-size: 16px;
   display: flex;
   justify-content: center;
-  font-family: 'Lato'; }
+  font-family: 'Archivo'; }
 
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-basis: 350px;
+  flex-basis: 325px;
   color: #fcfcfc;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF9E32), to(#F83B35));
   background-image: -webkit-linear-gradient(top, #FF9E32, #F83B35);
@@ -20,13 +26,15 @@ body {
   box-shadow: 5px 5px 35px #aaaaaa;
   align-items: center;
   border-radius: 3px;
-  padding: 1rem;
-  min-height: 550px; }
+  padding: 2rem;
+  min-height: 550px;
+  animation: 2s fadeIn; }
 
 .city-name {
   text-transform: uppercase;
-  font-size: 20px;
-  margin: 30px 0 0 0; }
+  font-size: 25px;
+  margin: 30px 0;
+  font-weight: 600; }
 
 .app-content {
   display: flex;
@@ -36,52 +44,63 @@ body {
 .icon-output {
   font-family: 'Weather';
   color: #fcfcfc;
-  font-size: 100px;
-  margin: 20px 0 5px 0; }
+  font-size: 150px;
+  margin: 20px 0 0 0; }
 
 .icon-description {
-  color: #fcfcfc91;
-  font-size: 14px;
+  margin: 0.5rem  0 1rem 0;
+  color: rgba(255, 255, 255, 0.7);
   font-style: italic; }
 
 .temperature {
   font-size: 45px;
   margin: 30px 0 25px 0; }
 
-.temperature-unit {
-  border-radius: 2px;
-  padding: 5px 20px;
-  font-size: 16px;
-  color: #252525;
-  border: 1px solid #eee;
-  background-color: #eee;
-  cursor: pointer; }
-
 .app-footer {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  padding: 40px; }
+  padding: 40px 0; }
 
 .data-box {
   width: 30%;
   padding: 0;
   margin: 0;
   font-family: 'Weather';
-  font-size: 45px;
+  font-size: 55px;
   display: flex;
   flex-direction: column;
   align-items: center; }
 
 .data-description {
-  font-family: 'Lato';
-  font-size: 14px;
+  font-family: 'Archivo';
+  font-size: 16px;
   margin: 0;
   text-transform: uppercase; }
 
 .data-value {
-  font-size: 14px;
+  font-size: 16px;
   margin: 5px;
-  font-family: 'Lato';
-  color: #fcfcfc91; }
+  font-family: 'Archivo';
+  color: rgba(255, 255, 255, 0.7); }
+
+.input {
+  border: 0; }
+
+.search {
+  position: relative; }
+  .search__input {
+    font-size: 15px;
+    border: 0;
+    height: 35px;
+    min-width: 220px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    padding: 0 10px; }
+  .search__submit {
+    font-size: 15px;
+    border: 0;
+    cursor: pointer;
+    height: 35px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff; }
 
