@@ -11,7 +11,7 @@ body{
   font-size: 16px;
   display: flex;
   justify-content: center;
-  font-family: 'Lato';
+  font-family: 'Archivo';
 }
 .wrapper{
   display: flex;
@@ -31,8 +31,9 @@ body{
 }
 .city-name{
   text-transform: uppercase;
-  font-size: 20px;
-  margin: 30px 0 0 0;
+  font-size: 25px;
+  margin: 30px 0;
+  font-weight: 600;
 }
 .app-content{
   display: flex;
@@ -42,12 +43,11 @@ body{
 .icon-output{
   font-family: 'Weather';
   color: #fcfcfc;
-  font-size: 100px;
-  margin: 20px 0 5px 0;
+  font-size: 150px;
+  margin: 20px 0 0 0;
 }
 .icon-description{
   color: #fcfcfc91;
-  font-size: 14px;
   font-style: italic;
 }
 .temperature{
@@ -74,21 +74,21 @@ body{
   padding: 0;
   margin: 0;
   font-family: 'Weather';
-  font-size: 45px;
+  font-size: 55px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .data-description{
-  font-family: 'Lato';
-  font-size: 14px;
+  font-family: 'Archivo';
+  font-size: 16px;
   margin: 0;
   text-transform: uppercase;
 }
 .data-value{
-  font-size: 14px;
+  font-size: 16px;
   margin: 5px;
-  font-family: 'Lato';
+  font-family: 'Archivo';
   color: #fcfcfc91;
 }
 

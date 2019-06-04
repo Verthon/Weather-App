@@ -1,4 +1,3 @@
-import {elements} from './elements';
 import '../scss/style.scss';
 import {Fetch} from './Fetch';
 import {key} from './api';
