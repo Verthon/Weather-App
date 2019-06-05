@@ -48,3 +48,7 @@ export const updateDom = (elements, data) => {
     wind.textContent = `${data.wind.speed} m/s`;
     humidity.textContent = `${data.main.humidity} %`;
 }
+
+export const toggleCSSClass = (element, className) => {
+  element.classList.toggle(className);
+}

@@ -1,6 +1,6 @@
 # Weather App
 
-Simple JavaScript application for displaying weather
+Simple JavaScript application for displaying weather based on user location
 
 [Live version hosted on gh-pages](https://verthon.github.io/Weather-App/dist)
 
@@ -10,7 +10,6 @@ Simple JavaScript application for displaying weather
 - Sass
 - HTML5
 - Webpack
-- [Powered by Dark Sky](https://darksky.net/poweredby/ )
+- [Powered by Open Weather Map](https://openweathermap.org/api)
+- [Autocomplete cities API](http://geobytes.com/free-ajax-cities-jsonp-api/)
 - ESLint
-
-https://cors-anywhere.herokuapp.com/

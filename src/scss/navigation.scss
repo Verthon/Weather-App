@@ -1,0 +1,34 @@
+.nav{
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 2rem;
+
+  &__hamburger{
+    border: 0;
+    color: #fff;
+    background: transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  &__line{
+    display: flex;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  &__line--center{
+    width: 75%;
+  }
+
+  &__line:last-of-type{
+    width: 50%
+  }
+}

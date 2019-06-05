@@ -1,0 +1,9 @@
+@mixin setPadding($top: null, $right: null, $bottom: null, $left: null, $media: null){
+  @if $media {
+    @media #{$media} {
+      padding: $top $right $bottom $left;
+    }
+  } @else {
+    padding: $top $right $bottom $left;
+  } 
+}

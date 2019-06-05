@@ -8,36 +8,44 @@
   <title>Weather App</title>
 </head>
 <body>
-  <div class="wrapper">
+  <div class="app">
     <nav class="nav">
-      <!-- <form class="search">
+      <button class="nav__hamburger" id="nav-hamburger">
+        <span class="nav__line"></span>
+        <span class="nav__line nav__line--center"></span>
+        <span class="nav__line"></span>
+      </button>
+    </nav>
+    <main class="app__content"> 
+      <h1 class="city-name" id="city-name">Welcome</h1>      
+      <p class="icon-output" id="weather-icon">Q</p>
+      <p class="icon-description" id="icon-desc"></p>
+      <p class="temperature" id="temperature">12</p>
+    </main>
+    <footer class="app__footer">
+      <div class="data-box">n
+        <p class="data-description">pressure</p>
+        <p class="data-value" id="pressure">1000 hPa</p>
+      </div>
+      <div class="data-box">a
+        <p class="data-description">wind</p>
+        <p class="data-value" id="wind">8.2 m/s</p>
+      </div>
+      <div class="data-box">j
+        <p class="data-description">humidity</p>
+        <p class="data-value" id="humidity">13%</p>
+      </div>
+    </footer>
+    <div class="search-menu" id="search-menu">
+      <form class="search">
+        <h2 class="title">Search</h2>
         <label class="label" aria-label="search">Search by city</label>
         <div class="search__wrapper">
-          <input class="search__input" type="search" name="search" id="search" placeholder="Enter city name">
+          <input class="search__input" type="search" name="search" id="search" placeholder="Please enter city name">
           <button class="search__submit" type="submit" id="submit"><i class="fas fa-search"></i></button>
         </div>
-      </form> -->
-    </nav>
-    <h1 class="city-name" id="city-name">Welcome</h1>
-    <main class="app-content">       
-        <p class="icon-output" id="weather-icon">Q</p>
-        <p class="icon-description" id="icon-desc"></p>
-        <p class="temperature" id="temperature">12</p>
-    </main>
-    <footer class="app-footer">
-        <div class="data-box">n
-          <p class="data-description">pressure</p>
-          <p class="data-value" id="pressure">1000 hPa</p>
-        </div>
-        <div class="data-box">a
-          <p class="data-description">wind</p>
-          <p class="data-value" id="wind">8.2 m/s</p>
-        </div>
-        <div class="data-box">j
-            <p class="data-description">humidity</p>
-            <p class="data-value" id="humidity">13%</p>
-        </div>
-    </footer>
+      </form>
+    </div>
   </div>
   <script async src="dist/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>

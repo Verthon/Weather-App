@@ -2,8 +2,13 @@ import '../scss/style.scss';
 import {Fetch} from './Fetch';
 import {key} from './api';
 import {renderData} from './renderData';
+import {navBtn, searchMenu, search, submitBtn} from './elements';
+import {toggleCSSClass} from './helpers';
 
 class App {
+  constructor(navBtn){
+    this.nav = navBtn;
+  }
 
   init(){
    document.addEventListener('DOMContentLoaded', this.getData); 
@@ -15,6 +20,10 @@ class App {
 
   saveWeather(){
 
+  }
+
+  handleNavigation(){
+    
   }
 
   error(err){
@@ -36,6 +45,12 @@ class App {
   }
 
 }
+
+navBtn.addEventListener('click', () =>{
+  toggleCSSClass(searchMenu, 'search-menu--active');
+});
+
+
 
 App.prototype.init();
 
