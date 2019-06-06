@@ -1,8 +1,10 @@
+@import './mixins.scss';
+
 .nav{
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  padding: 2rem;
+  @include setPadding(1rem);
 
   &__hamburger{
     border: 0;
@@ -11,8 +13,7 @@
     cursor: pointer;
     width: 30px;
     height: 20px;
-    display: flex;
-    flex-direction: column;
+    @include flexColumn();
     justify-content: space-between;
     padding: 0;
   }

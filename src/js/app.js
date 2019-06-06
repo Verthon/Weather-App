@@ -3,7 +3,7 @@ import {Fetch} from './Fetch';
 import {key} from './api';
 import {renderData} from './renderData';
 import {navBtn, searchMenu, search, submitBtn} from './elements';
-import {toggleCSSClass} from './helpers';
+import {toggleCSSClass, handleSearchSubmit} from './helpers';
 
 class App {
   constructor(navBtn){
@@ -50,7 +50,12 @@ navBtn.addEventListener('click', () =>{
   toggleCSSClass(searchMenu, 'search-menu--active');
 });
 
+submitBtn.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const result = handleSearchSubmit(e, search);
+  toggleCSSClass(searchMenu, 'search-menu--active');
 
+})
 
 App.prototype.init();
 

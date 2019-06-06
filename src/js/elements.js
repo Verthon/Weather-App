@@ -1,8 +1,8 @@
 
 export const navBtn = document.getElementById('nav-hamburger');
 export const searchMenu = document.getElementById('search-menu');
-export const submitBtn = document.getElementById('submit');
-export const search = document.getElementById('search');
+export const submitBtn = document.getElementById('search-submit');
+export const search = document.getElementById('search-input');
 
 export const elements = {
   temperature: document.getElementById('temperature'),

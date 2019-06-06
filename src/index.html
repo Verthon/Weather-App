@@ -37,17 +37,17 @@
       </div>
     </footer>
     <div class="search-menu" id="search-menu">
-      <form class="search">
-        <h2 class="title">Search</h2>
-        <label class="label" aria-label="search">Search by city</label>
+      <form class="search" id="search-submit">
+        <h2 class="search__title">Search by city</h2>
+        <label class="visually-hidden" aria-label="search">Search by city</label>
         <div class="search__wrapper">
-          <input class="search__input" type="search" name="search" id="search" placeholder="Please enter city name">
-          <button class="search__submit" type="submit" id="submit"><i class="fas fa-search"></i></button>
+          <input class="search__input" type="search" name="search" id="search-input" 
+          placeholder="Please enter city name" required>
+          <button class="search__submit" type="submit">Show weather</button>
         </div>
       </form>
     </div>
   </div>
   <script async src="dist/main.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
 </body>
 </html>

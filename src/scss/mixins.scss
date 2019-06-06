@@ -7,3 +7,12 @@
     padding: $top $right $bottom $left;
   } 
 }
+
+@mixin flexColumn(){
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin setGradient($direction, $start, $stop){
+  background-image: linear-gradient($direction, $start, $stop);
+}

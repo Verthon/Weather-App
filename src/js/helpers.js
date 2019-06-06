@@ -29,6 +29,7 @@ export const setWeatherIcon = (description, element) => {
       element.textContent = 'W';
     break;
     case 'haze':
+    case 'mist':
       element.textContent = 'N';
     break;
     default:
@@ -51,4 +52,9 @@ export const updateDom = (elements, data) => {
 
 export const toggleCSSClass = (element, className) => {
   element.classList.toggle(className);
+}
+
+export const handleSearchSubmit = (e, element) => {
+  e.preventDefault();
+  console.log(element.value);
 }
