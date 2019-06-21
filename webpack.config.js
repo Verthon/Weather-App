@@ -1,6 +1,6 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 module.exports = {
@@ -12,8 +12,8 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html"
+      template: './src/index.html',
+      filename: './index.html',
     }),
     new Dotenv(),
   ],
@@ -21,26 +21,26 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000
+    port: 9000,
   },
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.scss$/,
         use: [
-          "style-loader",
+          'style-loader',
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader",
-        ]
+          'css-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -48,23 +48,23 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 5000
-            }
-          }
-        ]
+              limit: 5000,
+            },
+          },
+        ],
       },
       {
         test: /\.html$/,
         use: [
           {
-            loader: "html-loader",
-            options: { minimize: true }
-          }
-        ]
+            loader: 'html-loader',
+            options: { minimize: true },
+          },
+        ],
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader']
+        use: ['file-loader'],
       },
       {
         test: /\.js$/,
@@ -72,16 +72,16 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env']
-          }
-        }
+            presets: ['@babel/env'],
+          },
+        },
       },
       {
         test: /\.svg$/,
         use: {
           loader: 'svg-inline-loader',
-        }
+        },
       },
-    ]
-  }
+    ],
+  },
 };

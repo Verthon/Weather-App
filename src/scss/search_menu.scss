@@ -1,0 +1,55 @@
+@import './mixins.scss';
+
+.search{
+
+  position: relative;
+  width: 100%;
+  color: #252525;
+  @include flexColumn();
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+
+  &__input{
+    font-size: 1rem;
+    border: 0;
+    height: 2.5rem;
+    width: 90%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    @include setPadding(0 1rem);
+    margin: 1rem;
+  }
+
+  &__submit{
+    font-size: 1rem;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5em 1.5em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    color: $main-white;
+    background-color: $deep-saffron;
+  }
+
+  &__wrapper{
+    @include flexColumn();
+    align-items: center;
+    width: 100%;
+    @include setPadding(1rem 2rem);
+  }
+}
+
+.search-menu{
+  background-color: $pale-lily;
+  transform: translateX(100%);
+  display: flex;
+  width: 100%;
+  top: -81%;
+  min-height: 650px;
+  position: relative;
+  z-index: 10;
+  transition: transform 0.5s;
+
+  &--active{
+    transform: translateX(0)
+  }
+}
