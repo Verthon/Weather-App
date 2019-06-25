@@ -2,7 +2,7 @@ export const navBtn = document.getElementById('nav-hamburger');
 export const searchMenu = document.getElementById('search-menu');
 export const submitBtn = document.getElementById('search-submit');
 export const search = document.getElementById('search-input');
-export const autocompleteUl = document.getElementById('autocomplete-result');
+export const autocomplete = document.getElementById('autocomplete');
 
 export const elements = {
   temperature: document.getElementById('temperature'),

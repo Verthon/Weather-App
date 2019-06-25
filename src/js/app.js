@@ -7,7 +7,7 @@ import {
   searchMenu,
   search,
   submitBtn,
-  autocompleteUl,
+  autocomplete,
 } from './elements';
 import {
   toggleCSSClass,
@@ -20,20 +20,8 @@ class App {
     this.nav = navBtn;
   }
 
-  init() {
-    document.addEventListener('DOMContentLoaded', this.getData);
-    if (!navigator.geolocation) {
-      alert('Geolocation is not supported by your browser');
-    }
-    navigator.geolocation.getCurrentPosition(this.success, this.error);
-  }
-
-  saveWeather() {}
-
-  handleNavigation() {}
-
   error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message} `);
+    console.log(`ERROR(${err.code}): ${err.message} `);
   }
 
   success(crd) {
@@ -42,6 +30,10 @@ class App {
       .then(json => renderData(json))
       .catch(err => this.error(err));
   }
+
+  saveWeather() {}
+
+  handleNavigation() {}
 
   getData() {
     Fetch.fetchDataByCity(key)
@@ -56,6 +48,14 @@ class App {
       .then(json => renderData(json))
       .catch(err => this.error(err));
   }
+
+  init() {
+    document.addEventListener('DOMContentLoaded', this.getData);
+    if (!navigator.geolocation) {
+      alert('Geolocation is not supported by your browser');
+    }
+    navigator.geolocation.getCurrentPosition(this.success, this.error);
+  }
 }
 
 navBtn.addEventListener('click', () => {
@@ -63,7 +63,7 @@ navBtn.addEventListener('click', () => {
 });
 
 search.addEventListener('keyup', e => {
-  handleAutocomplete(e, autocompleteUl);
+  handleAutocomplete(e, autocomplete);
 });
 
 submitBtn.addEventListener('submit', e => {

@@ -1,3 +1,5 @@
+import cities from 'cities.json';
+
 export const formatTemperature = temperature => {
   const result = temperature.toFixed(0);
   return `${result}°C`;
@@ -66,19 +68,34 @@ export const setCSSClass = (elem, className) => {
   elem.classList.add(className);
 };
 
-export const createElem = (tag, parent) => {
-  const element = document.createElement(tag);
-  setCSSClass(element, 'test');
+export const createElem = (tag, parent, quantity) => {
+  const elements = [];
+  const fragment = document.createDocumentFragment();
+  quantity.forEach(element => {
+    
+  });
+  
   parent.appendChild(element);
 };
+
+export const filterCities = (data, input) => {
+
+}
 
 export const addTextContent = (element, text) => {
   element.textContent = text;
 };
 
 export const handleAutocomplete = (e, element) => {
-  console.log(e.target.value, element);
-  createElem('li', element);
+  const input = e.target.value;
+  if(input.length >= 3){
+    filterCities(cities, input)
+    //filter cities.json
+  }
+  console.log(cities, input.length);
+  
+
+  //call createElem with datalist as parent and option
 };
 
 export const handleSearchSubmit = (e, element) => {

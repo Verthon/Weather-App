@@ -14,7 +14,7 @@ export class Fetch {
     );
   }
 
-  static fetchDataByCity(key, city = 'Washington') {
+  static fetchDataByCity(key = this.key, city = 'Washington') {
     return fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${key}`
     );
