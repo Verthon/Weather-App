@@ -2,6 +2,7 @@ import '../scss/style.scss';
 import { Fetch } from './Fetch';
 import { key } from './api';
 import { renderData } from './renderData';
+import {store} from './store';
 import {
   navBtn,
   searchMenu,
