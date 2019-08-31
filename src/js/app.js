@@ -1,76 +1,77 @@
-import '../scss/style.scss';
-import { Fetch } from './Fetch';
-import { key } from './api';
-import { renderData } from './renderData';
-import {store} from './store';
+/* eslint-disable no-undef */
+import '../scss/style.scss'
+import { Fetch } from './Fetch'
+import { key } from './api'
+import { renderData } from './renderData'
+import { store } from './store'
 import {
   navBtn,
   searchMenu,
   search,
   submitBtn,
-  autocomplete,
-} from './elements';
+  autocomplete
+} from './elements'
 import {
   toggleCSSClass,
   handleSearchSubmit,
-  handleAutocomplete,
-} from './helpers';
+  handleAutocomplete
+} from './helpers'
 
 class App {
-  constructor(navBtn) {
-    this.nav = navBtn;
+  constructor (navBtn) {
+    this.nav = navBtn
   }
 
-  error(err) {
-    console.log(`ERROR(${err.code}): ${err.message} `);
+  error (err) {
+    console.log(`ERROR(${err.code}): ${err.message} `)
   }
 
-  success(crd) {
+  success (crd) {
     Fetch.fetchDataByCoords(key, crd)
       .then(data => data.json())
       .then(json => renderData(json))
-      .catch(err => this.error(err));
+      .catch(err => this.error(err))
   }
 
-  saveWeather() {}
+  saveWeather () {}
 
-  handleNavigation() {}
+  handleNavigation () {}
 
-  getData() {
+  getData () {
     Fetch.fetchDataByCity(key)
       .then(data => data.json())
       .then(json => renderData(json))
-      .catch(err => this.error(err));
+      .catch(err => this.error(err))
   }
 
-  getDataByCity(city) {
+  getDataByCity (city) {
     Fetch.fetchDataByCity(key, city)
       .then(data => data.json())
       .then(json => renderData(json))
-      .catch(err => this.error(err));
+      .catch(err => this.error(err))
   }
 
-  init() {
-    document.addEventListener('DOMContentLoaded', this.getData);
+  init () {
+    document.addEventListener('DOMContentLoaded', this.getData)
     if (!navigator.geolocation) {
-      alert('Geolocation is not supported by your browser');
+      alert('Geolocation is not supported by your browser')
     }
-    navigator.geolocation.getCurrentPosition(this.success, this.error);
+    navigator.geolocation.getCurrentPosition(this.success, this.error)
   }
 }
 
 navBtn.addEventListener('click', () => {
-  toggleCSSClass(searchMenu, 'search-menu--active');
-});
+  toggleCSSClass(searchMenu, 'search-menu--active')
+})
 
 search.addEventListener('keyup', e => {
-  handleAutocomplete(e, autocomplete);
-});
+  handleAutocomplete(e, autocomplete)
+})
 
 submitBtn.addEventListener('submit', e => {
-  const result = handleSearchSubmit(e, search);
-  toggleCSSClass(searchMenu, 'search-menu--active');
-  App.prototype.getDataByCity(result);
-});
+  const result = handleSearchSubmit(e, search)
+  toggleCSSClass(searchMenu, 'search-menu--active')
+  App.prototype.getDataByCity(result)
+})
 
-App.prototype.init();
+App.prototype.init()
