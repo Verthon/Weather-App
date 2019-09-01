@@ -11,5 +11,4 @@ Simple JavaScript application for displaying weather based on user location
 - HTML5
 - Webpack
 - [Powered by Open Weather Map](https://openweathermap.org/api)
-- [Autocomplete cities API](http://geobytes.com/free-ajax-cities-jsonp-api/)
 - ESLint with integrated JavaScript Standard Style

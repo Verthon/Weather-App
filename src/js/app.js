@@ -20,6 +20,9 @@ import {
 class App {
   constructor (navBtn) {
     this.nav = navBtn
+    this.state = {
+      theme: 'hot'
+    }
   }
 
   error (err) {
