@@ -48,7 +48,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "cities.json": "^1.1.5",
     "jam-icons": "^2.0.0",
     "prettier": "^1.18.2",
