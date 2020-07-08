@@ -30,26 +30,21 @@ class App {
 
   success (crd) {
     Fetch.fetchDataByCoords(key, crd)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => renderData(data))
       .catch(err => this.error(err))
   }
 
   saveWeather () {}
 
-  handleNavigation () {}
-
   getData () {
     Fetch.fetchDataByCity(key)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => renderData(data))
       .catch(err => this.error(err))
   }
 
   getDataByCity (city) {
     Fetch.fetchDataByCity(key, city)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => enderData(data))
       .catch(err => this.error(err))
   }
 
