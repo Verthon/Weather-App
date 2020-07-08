@@ -3,7 +3,6 @@ import '../scss/style.scss'
 import { Fetch } from './Fetch'
 import { key } from './api'
 import { renderData } from './renderData'
-import { store } from './store'
 import {
   navBtn,
   searchMenu,
@@ -31,26 +30,21 @@ class App {
 
   success (crd) {
     Fetch.fetchDataByCoords(key, crd)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => renderData(data))
       .catch(err => this.error(err))
   }
 
   saveWeather () {}
 
-  handleNavigation () {}
-
   getData () {
     Fetch.fetchDataByCity(key)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => renderData(data))
       .catch(err => this.error(err))
   }
 
   getDataByCity (city) {
     Fetch.fetchDataByCity(key, city)
-      .then(data => data.json())
-      .then(json => renderData(json))
+      .then(data => enderData(data))
       .catch(err => this.error(err))
   }
 

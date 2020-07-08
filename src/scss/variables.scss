@@ -1,6 +1,27 @@
 $main-white: #fcfcfc;
 $red-orange: #F83B35;
 $deep-saffron: #FF9E32;
+
+@function getThemeValue($theme, $theme-value) {
+  @return map-get($theme, $theme-value)
+}
+
+$theme-hot: (
+  color-text: hsl(346.7,16.4%,15.6%),
+  color-bg-1: hsl(34.6,100%,72.2%),
+  color-bg-2: hsl(354.8,100%,68.6%),
+  color-value: hsl(346.7,16.4%,18.6%)
+);
+$theme-medium: (
+  color-text: hsl(203.4,30.4%,26.5%),
+  color-bg-1: hsl(119.3,100%,83.1%),
+  color-bg-2: hsl(163.4,100%,53.3%),
+  color-value: hsl(203.4,30.4%,30.5%)
+);
+
+
+$gradient-medium-1: map-get($theme-medium, color-bg-1);
+$gradient-medium-2: map-get($theme-medium, color-bg-2);
 $pale-lily: #f4ebe8;
 $font: Archivo, sans-serif;
 $font-decorative: Weather;

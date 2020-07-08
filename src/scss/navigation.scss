@@ -8,7 +8,6 @@
 
   &__hamburger{
     border: 0;
-    color: #fff;
     background: transparent;
     cursor: pointer;
     width: 30px;
@@ -22,7 +21,7 @@
     display: flex;
     width: 100%;
     height: 3px;
-    background-color: #fff;
+    background-color: hsl(346.7,16.4%,22.6%);
   }
 
   &__line--center{
