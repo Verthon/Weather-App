@@ -69,10 +69,10 @@ body {
   &--theme-cold {
     @include setGradient(
       to bottom,
-      getThemeValue($theme-medium, color-bg-1),
-      getThemeValue($theme-medium, color-bg-2)
+      getThemeValue($theme-cold, color-bg-1),
+      getThemeValue($theme-cold, color-bg-2)
     );
-    color: getThemeValue($theme-medium, color-text);
+    color: getThemeValue($theme-cold, color-text);
   }
 
   &__content {

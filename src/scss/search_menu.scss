@@ -6,14 +6,12 @@
   color: getThemeValue($theme-medium, color-text);
   @include flexColumn();
   align-items: center;
-  justify-content: center;
-  height: 50%;
+  padding: 2rem;
 
   &__input {
     font-size: 1rem;
     border: 0;
     height: 2.5rem;
-    width: 90%;
     box-shadow: $default-shadow;
     @include setPadding(0 1rem);
     margin: 1rem;
@@ -27,7 +25,7 @@
     padding: 0.5em 1.5em;
     box-shadow: $default-shadow;
     color: getThemeValue($theme-medium, color-text);
-    background-color: getThemeValue($theme-medium, color-bg-1);
+    background-color: getThemeValue($theme-hot, color-bg-1);
     border-radius: $default-border-radius;
   }
 

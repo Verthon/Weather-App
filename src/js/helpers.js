@@ -41,12 +41,25 @@ export const setWeatherIcon = (description, element) => {
   }
 }
 
+export const setAppTheme = (app, temperature) => {
+  if (temperature > 23) {
+    app.setAttribute('class', 'app app--theme-hot')
+    return true
+  }
+  if (temperature > 10) {
+    app.setAttribute('class', 'app app--theme-medium')
+    return true
+  }
+  app.setAttribute('class', 'app app--theme-cold')
+  return true
+}
+
 export const updateDom = (elements, data) => {
   const { cityName, iconDesc, temperature, pressure, wind, humidity } = elements
   cityName.textContent = data.name
   iconDesc.textContent = data.weather[0].description
   // Set correct temperature
-  temperature.textContent = formatTemperature(data.main.temp_max)
+  temperature.textContent = formatTemperature(data.main.temp)
   pressure.textContent = `${data.main.pressure} hPa`
   wind.textContent = `${data.wind.speed} m/s`
   humidity.textContent = `${data.main.humidity} %`
