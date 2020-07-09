@@ -79,7 +79,6 @@ export const handleAutocomplete = (e, element) => {
   if (input.length >= 3) {
     filterCities(cities, input)
   }
-  console.log(cities, input.length)
 }
 
 export const handleSearchSubmit = (e, element) => {

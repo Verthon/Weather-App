@@ -44,7 +44,7 @@ class App {
 
   getDataByCity (city) {
     Fetch.fetchDataByCity(key, city)
-      .then(data => enderData(data))
+      .then(data => renderData(data))
       .catch(err => this.error(err))
   }
 
