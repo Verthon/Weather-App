@@ -1,15 +1,8 @@
-/* eslint-disable no-undef */
 import '../scss/style.scss'
 import { Fetch } from './Fetch'
 import { key } from './api'
 import { renderData } from './renderData'
-import {
-  navBtn,
-  searchMenu,
-  search,
-  submitBtn,
-  autocomplete
-} from './elements'
+import { navBtn, searchMenu, search, searchForm, autocomplete } from './elements'
 import {
   toggleCSSClass,
   handleSearchSubmit,
@@ -19,41 +12,50 @@ import {
 class App {
   constructor (navBtn) {
     this.nav = navBtn
-    this.state = {
-      theme: 'hot'
+    this.navigatorOptions = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 75000
     }
   }
 
-  error (err) {
-    console.log(`ERROR(${err.code}): ${err.message} `)
+  handleError (error) {
+    console.error(error)
   }
 
-  success (crd) {
+  onNavigatorError (err) {
+    console.error(`ERROR (${err.code}): ${err.message} `)
+  }
+
+  onNavigatorSuccess (crd) {
     Fetch.fetchDataByCoords(key, crd)
       .then(data => renderData(data))
-      .catch(err => this.error(err))
+      .catch(err => this.handleError(err))
   }
-
-  saveWeather () {}
 
   getData () {
     Fetch.fetchDataByCity(key)
       .then(data => renderData(data))
-      .catch(err => this.error(err))
+      .catch(err => this.handleError(err))
   }
 
   getDataByCity (city) {
     Fetch.fetchDataByCity(key, city)
       .then(data => renderData(data))
-      .catch(err => this.error(err))
+      .catch(err => this.handleError(err))
   }
 
   init () {
     document.addEventListener('DOMContentLoaded', this.getData)
     if (!navigator.geolocation) {
-      alert('Geolocation is not supported by your browser')
+      window.alert('Geolocation is not supported by your browser')
     }
-    navigator.geolocation.getCurrentPosition(this.success, this.error)
+    console.log(navigator.geolocation)
+    navigator.geolocation.getCurrentPosition(
+      this.onNavigatorSuccess,
+      this.onNavigatorError,
+      this.navigatorOptions
+    )
   }
 }
 
@@ -65,10 +67,12 @@ search.addEventListener('keyup', e => {
   handleAutocomplete(e, autocomplete)
 })
 
-submitBtn.addEventListener('submit', e => {
+searchForm.addEventListener('submit', e => {
+  e.preventDefault()
   const result = handleSearchSubmit(e, search)
   toggleCSSClass(searchMenu, 'search-menu--active')
   App.prototype.getDataByCity(result)
+  searchForm.reset()
 })
 
 App.prototype.init()

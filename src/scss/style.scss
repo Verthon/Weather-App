@@ -89,8 +89,7 @@ body {
   }
 }
 .city-name {
-  text-transform: uppercase;
-  font-size: 25px;
+  font-size: 32px;
   margin: 30px 0;
   font-weight: 600;
 }
@@ -125,7 +124,16 @@ body {
 }
 .data-value {
   font-size: 1rem;
-  margin: 5px;
+  margin: 0.5rem 0;
   font-family: $font;
   color: getThemeValue($theme-medium, color-value);
+  &--theme-hot {
+    color: getThemeValue($theme-hot, color-value);
+  }
+  &--theme-medium {
+    color: getThemeValue($theme-medium, color-value);
+  }
+  &--theme-cold {
+    color: getThemeValue($theme-cold, color-value);
+  }
 }

@@ -1,8 +1,8 @@
 export const navBtn = document.getElementById('nav-hamburger')
 export const searchMenu = document.getElementById('search-menu')
-export const submitBtn = document.getElementById('search-submit')
 export const search = document.getElementById('search-input')
 export const autocomplete = document.getElementById('autocomplete')
+export const searchForm = document.getElementById('search-submit')
 
 export const elements = {
   app: document.getElementById('app'),
@@ -12,5 +12,5 @@ export const elements = {
   iconDesc: document.getElementById('icon-desc'),
   wind: document.getElementById('wind'),
   humidity: document.getElementById('humidity'),
-  pressure: document.getElementById('pressure'),
+  pressure: document.getElementById('pressure')
 }
