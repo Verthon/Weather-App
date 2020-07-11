@@ -16,6 +16,10 @@
     @include setPadding(0 1rem);
     margin: 1rem;
     border-radius: $default-border-radius;
+
+    &--error {
+      border: 1px solid red;
+    }
   }
 
   &__submit {

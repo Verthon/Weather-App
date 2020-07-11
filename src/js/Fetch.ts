@@ -1,13 +1,16 @@
 import { key } from './api'
 
 export class Fetch {
-  constructor (long, lat) {
+  static key: any
+  [x: string]: string
+  long: string
+  constructor (long: string, lat: string) {
     this.long = long
     this.lat = lat
     this.key = key
   }
 
-  static fetchDataByCoords (key = this.key, location) {
+  static fetchDataByCoords (key = this.key, location: any) {
     const { latitude, longitude } = location.coords
     return window.fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&APPID=${key}`

@@ -1,7 +1,7 @@
-const HtmlWebPackPlugin = require('html-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const path = require('path')
 
 module.exports = {
   plugins: [
@@ -9,29 +9,29 @@ module.exports = {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: '[name].css',
-      chunkFilename: '[id].css',
+      chunkFilename: '[id].css'
     }),
     new HtmlWebPackPlugin({
       template: './src/index.html',
-      filename: './index.html',
+      filename: './index.html'
     }),
-    new Dotenv(),
+    new Dotenv()
   ],
-  entry: './src/js/app.js',
+  entry: './src/js/app.ts',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
-    port: 9000,
+    port: 9000
   },
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
       {
         test: /\.scss$/,
@@ -39,8 +39,8 @@ module.exports = {
           'style-loader',
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
-        ],
+          'sass-loader'
+        ]
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -48,23 +48,23 @@ module.exports = {
           {
             loader: 'url-loader',
             options: {
-              limit: 5000,
-            },
-          },
-        ],
+              limit: 5000
+            }
+          }
+        ]
       },
       {
         test: /\.html$/,
         use: [
           {
             loader: 'html-loader',
-            options: { minimize: true },
-          },
-        ],
+            options: { minimize: true }
+          }
+        ]
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
-        use: ['file-loader'],
+        use: ['file-loader']
       },
       {
         test: /\.js$/,
@@ -72,16 +72,24 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/env'],
-          },
-        },
+            presets: ['@babel/env']
+          }
+        }
+      },
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
       },
       {
         test: /\.svg$/,
         use: {
-          loader: 'svg-inline-loader',
-        },
-      },
-    ],
+          loader: 'svg-inline-loader'
+        }
+      }
+    ]
   },
-};
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js']
+  }
+}

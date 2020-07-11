@@ -1,8 +1,8 @@
 export const navBtn = document.getElementById('nav-hamburger')
 export const searchMenu = document.getElementById('search-menu')
-export const search = document.getElementById('search-input')
+export const search: any = document.getElementById('search-input')
 export const autocomplete = document.getElementById('autocomplete')
-export const searchForm = document.getElementById('search-submit')
+export const searchForm: any = document.getElementById('search-submit')
 
 export const elements = {
   app: document.getElementById('app'),
