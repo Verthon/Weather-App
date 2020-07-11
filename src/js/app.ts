@@ -7,7 +7,6 @@ import {
   searchMenu,
   search,
   searchForm,
-  autocomplete
 } from './elements'
 import {
   toggleCSSClass,

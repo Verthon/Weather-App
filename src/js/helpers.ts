@@ -94,7 +94,7 @@ export const addTextContent = (element: HTMLElement, text: string) => {
 }
 
 export const handleSearchSubmit = (searchInput: HTMLInputElement) => {
-  const regex = new RegExp('^[a-z-A-Z-]+$', 'gm')
+  const regex = new RegExp('^[a-z-A-Z- ,]+$', 'gm')
   if (regex.test(searchInput.value) && searchInput.value.length >= 2) {
     return searchInput.value
   }
