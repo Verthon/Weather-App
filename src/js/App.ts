@@ -44,30 +44,30 @@ class App {
     this.error = null
   }
 
-  onNavigatorError (error: any) {
+  onNavigatorError (error: {code: any, message: string}) {
     this.navigatorError = error
     console.error(`ERROR (${error.code}): ${error.message} `)
   }
 
   onNavigatorSuccess (crd: any) {
-    Fetch.fetchDataByCoords(key, crd)
+    Fetch.prototype.fetchDataByCoords(key, crd)
       .then(data => renderData(data))
       .catch(err => this.handleError(err))
   }
 
   getData () {
-    Fetch.fetchDataByCity(key)
+    Fetch.prototype.fetchDataByCity(key)
       .then(data => renderData(data))
       .catch(err => this.handleError(err))
   }
 
   getDataByCity (city: string) {
-    Fetch.fetchDataByCity(key, city)
+    Fetch.prototype.fetchDataByCity(key, city)
       .then(data => renderData(data))
       .catch(err => this.handleError(err))
   }
 
-  handleSubmit (e: any) {
+  handleSubmit (e: Event) {
     e.preventDefault()
     const result = handleSearchSubmit(search)
     if (result && this.error === null) {
@@ -87,10 +87,10 @@ class App {
     }
     navigator.geolocation.getCurrentPosition(
       this.onNavigatorSuccess,
-      this.onNavigatorError,
+      this.onNavigatorError.bind(this),
       this.navigatorOptions
     )
-    searchForm.addEventListener('submit', (e:any) => this.handleSubmit(e))
+    searchForm.addEventListener('submit', (e: Event) => this.handleSubmit(e))
   }
 }
 

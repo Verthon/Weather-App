@@ -24,6 +24,8 @@
     "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@testing-library/dom": "^7.20.0",
+    "@testing-library/jest-dom": "^5.11.0",
+    "@types/jest": "^26.0.4",
     "babel-loader": "^8.1.0",
     "css-loader": "^2.1.1",
     "dotenv-webpack": "^1.8.0",
@@ -51,12 +53,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "@types/jest": "^26.0.4",
-    "acorn": "^6.4.1",
-    "cities.json": "^1.1.5",
-    "jam-icons": "^2.0.0",
-    "prettier": "^1.19.1",
-    "redux": "^4.0.5"
-  }
+  "dependencies": {}
 }

@@ -17,7 +17,7 @@ module.exports = {
     }),
     new Dotenv()
   ],
-  entry: './src/js/app.ts',
+  entry: './src/js/App.ts',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,
