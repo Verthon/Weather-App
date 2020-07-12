@@ -6,10 +6,9 @@
 
 @font-face {
   font-family: 'Weather';
-  src: 
-  url('../fonts/Weather&Time.woff') format('woff'),
-  url('../fonts/Weather&Time.woff2') format('woff2'),
-  url('../fonts/Weather&Time.ttf') format('ttf');
+  src: url('../fonts/Weather&Time.woff') format('woff'),
+    url('../fonts/Weather&Time.woff2') format('woff2'),
+    url('../fonts/Weather&Time.ttf') format('ttf');
 }
 
 .visually-hidden {
@@ -23,91 +22,118 @@
   width: 1px;
 }
 
-*{
+* {
   box-sizing: border-box;
 }
-body{
+body {
   font-size: 16px;
   display: flex;
   justify-content: center;
   font-family: $font;
 }
-.app{
+.app {
   display: flex;
   flex-direction: column;
-  flex-basis: 400px;
-  @include setGradient(to bottom, getThemeValue($theme-medium, color-bg-1), getThemeValue($theme-medium, color-bg-2));
+  flex-basis: $app-width;
+  @include setGradient(
+    to bottom,
+    getThemeValue($theme-medium, color-bg-1),
+    getThemeValue($theme-medium, color-bg-2)
+  );
   color: getThemeValue($theme-medium, color-text);
-  box-shadow: 5px 5px 35px #aaaaaa;
+  box-shadow: $huge-shadow;
   align-items: center;
-  border-radius: 3px;
-  height: 700px;
+  border-radius: $default-border-radius;
+  height: $app-height;
   animation: 2s fadeIn;
   overflow: hidden;
 
   &--theme-hot {
-    @include setGradient(to bottom, getThemeValue($theme-hot, color-bg-1), getThemeValue($theme-hot, color-bg-2));
-    color: getThemeValue($theme-hot, color-text)
+    @include setGradient(
+      to bottom,
+      getThemeValue($theme-hot, color-bg-1),
+      getThemeValue($theme-hot, color-bg-2)
+    );
+    color: getThemeValue($theme-hot, color-text);
   }
 
-  &__content{
+  &--theme-medium {
+    @include setGradient(
+      to bottom,
+      getThemeValue($theme-medium, color-bg-1),
+      getThemeValue($theme-medium, color-bg-2)
+    );
+    color: getThemeValue($theme-medium, color-text);
+  }
+
+  &--theme-cold {
+    @include setGradient(
+      to bottom,
+      getThemeValue($theme-cold, color-bg-1),
+      getThemeValue($theme-cold, color-bg-2)
+    );
+    color: getThemeValue($theme-cold, color-text);
+  }
+
+  &__content {
     @include flexColumn();
     align-items: center;
     @include setPadding(1rem, 2rem, 1rem, 2rem);
   }
 
-  &__footer{
+  &__footer {
     display: flex;
     justify-content: space-around;
     width: 100%;
     @include setPadding(1rem, 2rem, 1rem, 2rem);
   }
-
 }
-.city-name{
-  text-transform: uppercase;
-  font-size: 25px;
+.city-name {
+  font-size: 32px;
   margin: 30px 0;
   font-weight: 600;
 }
-.icon-output{
+.icon-output {
   font-family: $font-decorative;
-  font-size: 150px;
+  font-size: $font-size-icon;
   margin: 20px 0 0 0;
 }
-.icon-description{
-  margin: 0.5rem  0 1rem 0;
-  color: hsl(346.7,16.4%,22.6%);
+.icon-description {
+  margin: 0.5rem 0 1rem 0;
+  color: getThemeValue($theme-medium, color-value);
   font-style: italic;
 }
-.temperature{
-  font-size: 45px;
+.temperature {
+  font-size: $font-size-temperature;
   margin: 30px 0 25px 0;
 }
-.data-box{
+.data-box {
   width: 30%;
   @include setPadding(0, 0, 0, 0);
   margin: 0;
   font-family: $font-decorative;
-  font-size: 55px;
+  font-size: $font-decorative-size;
   @include flexColumn();
   align-items: center;
 }
-.data-description{
+.data-description {
   font-family: $font;
-  font-size: 16px;
+  font-size: 1rem;
   margin: 0;
   text-transform: uppercase;
 }
-.data-value{
-  font-size: 16px;
-  margin: 5px;
+.data-value {
+  font-size: 1rem;
+  margin: 0.5rem 0;
   font-family: $font;
-  color: hsl(346.7,16.4%,22.6%);
+  color: getThemeValue($theme-medium, color-value);
+  &--theme-hot {
+    color: getThemeValue($theme-hot, color-value);
+  }
+  &--theme-medium {
+    color: getThemeValue($theme-medium, color-value);
+  }
+  &--theme-cold {
+    color: getThemeValue($theme-cold, color-value);
+  }
 }
-
-
-
-
-
-

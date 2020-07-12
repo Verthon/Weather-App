@@ -1,3 +1,4 @@
 node_modules
 .env
-api.js
+api.ts
+dist

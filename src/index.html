@@ -11,9 +11,9 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="app">
+    <div class="app" id="app" data-test-id="app">
       <nav class="nav">
-        <button class="nav__hamburger" id="nav-hamburger">
+        <button class="nav__hamburger" id="nav-hamburger" data-testid="nav-hamburger">
           <span class="nav__line"></span>
           <span class="nav__line nav__line--center"></span>
           <span class="nav__line"></span>
@@ -22,7 +22,7 @@
       <main class="app__content">
         <h1 class="city-name" id="city-name">Welcome</h1>
         <p class="icon-output" id="weather-icon">Q</p>
-        <p class="icon-description" id="icon-desc"></p>
+        <p class="data-value" id="icon-desc"></p>
         <p class="temperature" id="temperature">12</p>
       </main>
       <footer class="app__footer">
@@ -48,13 +48,15 @@
           <label class="visually-hidden" aria-label="search"
             >Search by city</label
           >
+          <p>For cities with a two-member name please use format with a hyphen eg. Bielsko-Biala</p>
+          <p>For cities with same names, but different country, please use format eg. London, Ontario</p>
           <div class="search__wrapper">
             <input
               class="search__input"
               type="search"
               name="search"
               id="search-input"
-              placeholder="Please enter city name"
+              placeholder="eg. London, Ontario"
               list="autocomplete"
               required
             />
